@@ -1,0 +1,80 @@
+/* Styles généraux */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* En-tête */
+.header {
+    position: relative;
+    overflow: hidden;
+    height: 100vh; /* Hauteur de la fenêtre */
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Couvre tout l'espace disponible */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Overlay pour le texte */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent */
+    color: white;
+    padding: 20px;
+}
+
+/* Titres */
+h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+/* Paragraphes */
+p {
+    font-size: 1.2em;
+    margin: 15px 0;
+}
+
+/* Boutons d'appel à l'action */
+.cta-links {
+    margin-top: 20px;
+}
+
+.cta-button {
+    background-color: #007bff; /* Couleur du bouton */
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #0056b3; /* Couleur au survol */
+}
+
+/* Styles du footer */
+footer {
+    text-align: center;
+    color: rgb(0, 0, 0);
+}

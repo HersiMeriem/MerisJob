@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Contactez-nous</title>
+    <link rel="stylesheet" href="contact.css">
+    <script type="text/javascript">
+        function verif() {
+            const nom = document.getElementById("nom").value;
+            const prenom = document.getElementById("prenom").value;
+            const cin = document.getElementById("cin").value;
+            const email = document.getElementById("email").value;
+            const telephone = document.getElementById("telephone").value;
+
+            if (!isNaN(nom)) {
+                alert("Le nom doit être alphabétique.");
+                return false;
+            }
+            if (!isNaN(prenom)) {
+                alert("Le prénom doit être alphabétique.");
+                return false;
+            }
+            if (cin === "" || cin.length !== 8 || isNaN(cin)) {
+                alert("Le CIN est obligatoire et doit contenir 8 chiffres.");
+                return false;
+            }
+            if (email === "") {
+                alert("L'email ne doit pas être vide.");
+                return false;
+            }
+            if (isNaN(telephone) || telephone === "") {
+                alert("Le numéro de téléphone doit être numérique.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+   
+    <header>
+        <h1>Pour plus d'informations, laissez-nous vos coordonnées ou appelez-nous</h1>
+        <p>au <strong>70985146</strong> pour obtenir une recommandation personnalisée.</p>
+        <p>Vous pouvez également nous contacter par mail à <strong>merisjob@gmail.com</strong></p>
+    </header>
+    <form name="contactForm" method="POST" action="Bienvenu chez MerisJob" onsubmit="return verif()">
+        <div class="form-section">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="t1">
+        </div>
+
+        <div class="form-section">
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="t2">
+        </div>
+
+        <div class="form-section">
+            <label for="cin">CIN :</label>
+            <input type="text" id="cin" name="t3" maxlength="8" placeholder="8 chiffres">
+        </div>
+
+        <div class="form-section">
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="t4" placeholder="exemple@gmail.com">
+        </div>
+
+        <div class="form-section">
+            <label for="telephone">Numéro de téléphone :</label>
+            <input type="text" id="telephone" name="t5" placeholder="Numéro de téléphone">
+        </div>
+
+        <div class="form-section">
+            <label>Sexe :</label>
+            <input type="radio" id="homme" name="R1" value="homme">
+            <label for="homme">Homme</label>
+            <input type="radio" id="femme" name="R1" value="femme">
+            <label for="femme">Femme</label>
+        </div>
+
+        <div class="form-section">
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" placeholder="Écrire un message..."></textarea>
+        </div>
+
+        <div class="form-section">
+            <input type="submit" value="Envoyer" name="B2" class="submit-button">
+        </div>
+        <a href="Projet.html" class="back-button">Retour à la page principal</a>
+    </form>
+ 
+
+    <footer>
+        <h3>Adresse</h3>
+        <p>Avenue Habib-Bourguiba, Tunis</p>
+            © 2024 MerisJob | Tous droits réservés.
+    </footer>
+</body>
+</html>
